@@ -33,6 +33,10 @@ case "$1" in
             bash stopvpnserver.sh
             exit 0
             ;;
+        wipe)
+            bash wipe.sh
+            exit 0
+            ;;
          
         *)
             echo "Usage: $0 <command>, where <command> is:"
@@ -41,5 +45,6 @@ case "$1" in
             echo "  init             initializes and runs the vpn server"
             echo "  run              runs the vpn server"
             echo "  stop             stops the vpn server"
+            echo "  wipe             stop and remove the containers"
             exit 1
 esac

@@ -6,7 +6,7 @@ echo "Reading config...." >&2
 docker rm $OVPN_DATA
 echo "#######initialize container########"
 docker volume create --name $OVPN_DATA
-docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://vpn.petertaylor.me
+docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://$FQDN
 docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki
 docker stop $VPN_SERVER
 docker rm $VPN_SERVER

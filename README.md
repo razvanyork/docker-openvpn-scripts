@@ -1,4 +1,7 @@
 # docker-openvpn-scripts
+Tested on Docker version 1.12.5.
+
+
 Uses the kylemanna/openvpn docker container to create a running instance of openvpn. It: - create keys, either by 
 "add SHORTNAME", or by "addfromfile" and specifying in the dockervpn.config file; - initializes with variable 
 "init"; - can "run" or "stop" the vpn server. Usage: ./opendockvpn.sh <command>, where <command> is:
